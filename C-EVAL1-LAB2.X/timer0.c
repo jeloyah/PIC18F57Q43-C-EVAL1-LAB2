@@ -10,7 +10,7 @@ void TIMER0_Initialize(void)
 	T0CON0 = 0x10;
     
     /* HFINTOSC; counter not synchronized; prescaler 1:256 */
-	T0CON1 = 0x78;   
+	T0CON1 = 0x76;   
 }
 
 void TIMER0_Delay(void)

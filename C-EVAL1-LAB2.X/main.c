@@ -37,16 +37,44 @@ void main(void) {
     /* infinite loop */
     while(1)
     {
-        //LATF = 0x08;
+         /* Is SW0 opened? */
+        if (PORTB== 0x10)
+        {
+            
+            /* Turn off LED0 */
+            /* PORTFbits.RF3 = 1; */
+            LATF = 0x0F;
+        }
         
-        //TIMER0_Delay();
+        /* else SW0 is closed */
+        else
+        {
+            userLED();
+                    
+        }    
         
-        //LATF = 0x00;
-        
-        //TIMER0_Delay();
         
      } /* while */
         
     
     return;
 } /* main*/
+
+
+void userLED(void)
+{
+            LATF = 0x08;      
+            TIMER0_Delay();        
+            LATF = 0x00;        
+            TIMER0_Delay();
+            
+            LATF = 0x08;      
+            TIMER0_Delay();        
+            LATF = 0x00;        
+            TIMER0_Delay();
+            
+            LATF = 0x08;      
+            TIMER0_Delay();        
+            LATF = 0x00;        
+            TIMER0_Delay();
+}

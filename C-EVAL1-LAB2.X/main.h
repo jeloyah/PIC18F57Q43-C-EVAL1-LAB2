@@ -61,8 +61,8 @@
     <p><b>Remarks:</b></p>
  */
 
-/* Configura PuertoA */
-void Delay_ms(void);
+/* Toggle RB4 3 times */
+void userLED(void);
 
 // TODO Insert declarations or function prototypes (right here) to leverage 
 // live documentation

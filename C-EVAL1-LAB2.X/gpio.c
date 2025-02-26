@@ -27,11 +27,11 @@ void PortB_Initialize(void)
     /* Pins as digital I/O */
     ANSELB = 0x00;
     
-    /* Disable Rpull-ups */
-    WPUB = 0x00;
+    /* Enable pull-up in RB4, disable Rpull-ups in RB7:RB5 & RB3:RB0 */
+    WPUB = 0x10;
         
-    /* RB7:RB0 as outputs */
-    TRISB = 0x00;
+    /* RB4 as input, RB7:RB5 & RB3:RB0 as outputs */
+    TRISB = 0x10;
 }
 
 /* PortC initialization */
